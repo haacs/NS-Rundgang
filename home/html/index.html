@@ -63,6 +63,7 @@
     </nav>
 
     <div class="container">
+
       <div class="jumbotron">
         <div class="container">
           <h1>Willkommen!</h1>
@@ -71,18 +72,27 @@
         </div>
       </div>
 
-      <div id="introWell" class="well">
-        <video id="introVid" src="../img/testvid.mp4" autoplay></video>
-        <script type="text/javascript">
-        jQuery(document).ready(function($){
-          $('#introVid').on("ended", function(){
-            var introVid = $(this);
-            introVid.fadeOut("slow", function(){
-              introVid.replaceWith("<button id='btn-intro-ort1' type='button' class='btn btn-default btn-xs btn-intro' aria-label='Left Align'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></button>")
-            });
-          }); 
-        });
-        </script>
+      <div align="center">
+        <div id="introWell" class="well" align="center">
+          <video id="introVid" src="../img/testvid.mp4" autoplay></video>
+          <button id='btn-intro-ort1' alt="" type='button' class='btn btn-default btn-xs btn-intro' type="hidden" aria-label='Left Align'>
+            <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
+          </button>
+          <button id='btn-intro-ort2' type='button' class='btn btn-default btn-xs btn-intro' aria-label='Left Align'>
+            <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
+          </button>
+          <script type="text/javascript">
+          jQuery(document).ready(function($){
+            $('#introVid').on("ended", function(){
+              $(this).fadeOut("slow", function(){
+                $("#btn-intro-ort1").fadeIn("slow", function(){
+                  $("#btn-intro-ort2").fadeIn("slow")
+                })
+              });
+            }); 
+          });
+          </script>
+        </div>
       </div>
 
       <!-- Example row of columns

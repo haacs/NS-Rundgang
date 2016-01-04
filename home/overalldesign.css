@@ -7,7 +7,5 @@ body {
 }
 .jumbotron {
 	background-color: rgba(255, 0, 0, 0.7);
-}
-.col-md-4 {
-	background-color: #fff;
+	color: #fff;
 }

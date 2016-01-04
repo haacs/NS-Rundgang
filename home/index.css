@@ -1,4 +1,3 @@
-/* Move down content because we have a fixed navbar that is 50px tall */
 .endframe{
 	padding-bottom: 5px;
 }
@@ -9,11 +8,17 @@
 }
 #introVid{
 	position: relative;
+	top: 30px;
 }
 #btn-intro-ort1{
 	position: relative;
 	left: 100px;
 	bottom: 5px;
+}
+#btn-intro-ort2{
+	position: relative;
+	left: 50px;
+	bottom: 100px;
 }
 #introWell{
 	height: 444px;
