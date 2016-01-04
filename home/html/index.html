@@ -56,11 +56,6 @@
                 </ul>
               </li>
               <li><a href="#">weitere Punkte</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
             </ul>
           </li>
         </div><!--/.navbar-collapse -->
@@ -79,12 +74,14 @@
       <div id="introWell" class="well">
         <video id="introVid" src="../img/testvid.mp4" autoplay></video>
         <script type="text/javascript">
+        jQuery(document).ready(function($){
           $('#introVid').on("ended", function(){
             var introVid = $(this);
             introVid.fadeOut("slow", function(){
               introVid.replaceWith("<button id='btn-intro-ort1' type='button' class='btn btn-default btn-xs btn-intro' aria-label='Left Align'><span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span></button>")
             });
-          });
+          }); 
+        });
         </script>
       </div>
 
