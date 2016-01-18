@@ -75,12 +75,16 @@
       <div align="center">
         <div id="introWell" class="well" align="center">
           <video id="introVid" src="../img/testvid.mp4" autoplay></video>
-          <button id='btn-intro-ort1' alt="" type='button' class='btn btn-default btn-xs btn-intro' type="hidden" aria-label='Left Align'>
-            <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
-          </button>
-          <button id='btn-intro-ort2' type='button' class='btn btn-default btn-xs btn-intro' aria-label='Left Align'>
-            <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
-          </button>
+          <div id='btn-intro-ort1' class="intro-btn-wrp">
+            <button type='button' class='btn btn-default btn-xs btn-intro' type="hidden" aria-label='Left Align'>
+              <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
+            </button>
+          </div>
+          <div id='btn-intro-ort2' class="intro-btn-wrp">
+            <button type='button' class='btn btn-default btn-xs btn-intro' aria-label='Left Align'>
+              <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
+            </button>
+          </div>
           <script type="text/javascript">
           jQuery(document).ready(function($){
             $('#introVid').on("ended", function(){
@@ -94,26 +98,6 @@
           </script>
         </div>
       </div>
-
-      <!-- Example row of columns
-        <div class="row">
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="http://wwwdotcom.com" role="button">View details »</a></p>
-          </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="http://wwwdotcom.com" role="button">View details »</a></p>
-         </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="http://wwwdotcom.com" role="button">View details »</a></p>
-          </div>
-        </div>
-      -->
 
       <hr>
 

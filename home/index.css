@@ -11,12 +11,12 @@
 	top: 30px;
 }
 #btn-intro-ort1{
-	position: relative;
-	left: 100px;
-	bottom: 5px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
 }
 #btn-intro-ort2{
-	position: relative;
+	position: absolute;
 	left: 50px;
 	bottom: 100px;
 }
@@ -28,4 +28,7 @@
 	background-repeat: no-repeat;
 	background-color: rgba(255, 0, 0, 0.6);
 	position: relative;
+}
+.intro-btn-wrp{
+	display: none;
 }
