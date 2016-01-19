@@ -1,0 +1,8 @@
+.popover {
+  position: relative;
+  display: block;
+  margin: 20px;
+}
+.popover .right {
+	text-align: right;
+}
