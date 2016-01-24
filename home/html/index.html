@@ -83,9 +83,9 @@
           jQuery(document).ready(function($){
             $('#introVid').on("ended", function(){
               $(this).fadeOut("slow", function(){
-                $("#btn-intro-ort1").fadeIn("slow", function(){
-                  $("#btn-intro-ort2").fadeIn("slow")
-                })
+                $(".intro-btn-wrp").each(function() {
+                  $(this).fadeIn("slow")
+                });
               });
             }); 
           });
