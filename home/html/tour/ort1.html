@@ -6,19 +6,21 @@
 
     <meta name="description" content="NS-Stadtführung">
     <meta name="author" content="Paul Hartmann">
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="../../favicon.ico">
 
-    <title>Home - NS Stadtführung</title>
+    <title>Ort1 - NS Stadtführung</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../bootstrap.min.css" rel="stylesheet">
+    <link href="../../bootstrap.min.css" rel="stylesheet">
 
-    <link href="../overalldesign.css" rel="stylesheet">
-    <link href="../index.css" rel="stylesheet">
+    <link href="../../overalldesign.css" rel="stylesheet">
+    <link href="../../ort.css" rel="stylesheet">
 
-    <script src="../ie-emulation-modes-warning.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
 
-    <script src="../jquery.min.js"></script>
+    <script src="../../ie-emulation-modes-warning.js"></script>
+
+    <script src="../../jquery.min.js"></script>
 
   </head>
 
@@ -49,8 +51,8 @@
                 </li>
                 <li><a href="#">weitere Punkte</a></li>
               </ul>
+              <li><a href="./chronik.html">Chronik</a></li>
             </li>
-            <li><a href="./chronik.html">Chronik</a></li>
           </ul>
         </div>
       </div>
@@ -60,38 +62,39 @@
 
       <div class="jumbotron">
         <div class="container">
-          <h1>Willkommen!</h1>
+          <h1>Ort1</h1>
           <p>NS - Stadtführung</p>
-          <p><a class="btn btn-primary btn-lg" href="http://wwwdotcom.com" role="button">Stadtführung beginnen »</a></p>
         </div>
       </div>
 
-      <div align="center">
-        <div id="introWell" class="well" align="center">
-          <video id="introVid" src="../img/testvid.mp4" autoplay></video>
-          <div id='btn-intro-ort1' class="intro-btn-wrp">
-            <button type='button' class='btn btn-default btn-xs btn-intro' type="hidden" aria-label='Left Align'>
-              <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
-            </button>
-          </div>
-          <div id='btn-intro-ort2' class="intro-btn-wrp">
-            <button type='button' class='btn btn-default btn-xs btn-intro' aria-label='Left Align'>
-              <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
-            </button>
-          </div>
-          <script type="text/javascript">
-            jQuery(document).ready(function($){
-              $('#introVid').on("ended", function(){
-                $(this).fadeOut("slow", function(){
-                  $(".intro-btn-wrp").each(function() {
-                    $(this).fadeIn("slow")
-                  });
-                });
-              }); 
-            });
-          </script>
-        </div>
+    </div>
+
+    <div class="section panel panel-default">
+      <div class="container section-inner">
+        <h4>Überschrift</h4>
+        <p>Text. Das ist so.<a class="srcbtn" role="button" target="src-1"><sup>[1]</sup></a><cite class="srctxt" id="src-1"> hier steht Warum.</cite> Mehr Text.<q>Text von Karl</q></p>
       </div>
+    </div>
+
+    <div class="section panel panel-default">
+      <div class="container section-inner" align="center">
+        <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=Stadtbahnhof%20Eschwege&destination=place_id:ChIJMUmOvb25pEcRPUewCxh5u00&key=AIzaSyCPIQox75ruBBARUffohD7XMgcmSrOsJac" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        $(".srcbtn").click(function(){
+          target = "#" + $(this).attr("target");
+          $(target).slideToggle("slow");
+        });
+      });
+    </script>
+
+    <p id="platzhalter"></p>
+
+    <div class="container">
 
       <hr>
 
@@ -100,10 +103,9 @@
       </footer>
     </div>
 
-    <script src="../bootstrap.min.js"></script>
+    <script src="../../bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../ie10-viewport-bug-workaround.js"></script>
-  
+    <script src="../../ie10-viewport-bug-workaround.js"></script>
 
   </body>
 </html>

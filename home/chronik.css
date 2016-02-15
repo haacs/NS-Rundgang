@@ -6,3 +6,6 @@
 .popover .right {
 	text-align: right;
 }
+#tglsrc {
+	position: fixed;
+}

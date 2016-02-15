@@ -24,7 +24,7 @@
 
   <body>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="./index.html">NS - Stadtführung</a>
@@ -63,6 +63,25 @@
           <h2>Willkommen!</h2>
           <p>NS - Chronik</p>
         </div>
+      </div>
+
+      <div id="tglsrc" class="btn-group" role="group" aria-label="...">
+        <button class="btn btn-default" type="button" id="shwsrcmst" aria-label="..."><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+        <script type="text/javascript">
+        jQuery(document).ready(function($){
+          $('#shwsrcmst').click(function(){
+            $('div[id|="source"]').collapse("show");
+          }); 
+        });
+        </script>
+        <button class="btn btn-default" type="button" id="hdsrcmst" aria-label="..."><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button>
+        <script type="text/javascript">
+        jQuery(document).ready(function($){
+          $('#hdsrcmst').click(function(){
+            $('div[id|="source"]').collapse("hide");
+          }); 
+        });
+        </script>
       </div>
 
       <div class="row">
