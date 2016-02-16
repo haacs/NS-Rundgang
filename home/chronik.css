@@ -9,3 +9,37 @@
 #tglsrc {
 	position: fixed;
 }
+#eventwrp {
+	background-image: url("./img/timelineline.gif");
+	background-position: center;
+	background-repeat: repeat-y;
+}
+.popover.right {
+	margin-left: 1px;
+}
+.popover.left {
+	margin-right: 1px;
+}
+.event-row .col-md-6 {
+	position: relative;
+}
+#eventwrp .event-row:nth-child(odd) .col-md-6:first-child:after {
+	position: absolute;
+	content: ' ';
+	top: 33px;
+	right: -5px;
+	width: 0;
+	height: 0;
+	border: 5px solid white;
+	border-radius: 5px;
+}
+#eventwrp .event-row:nth-child(even) .col-md-6:first-child:after {
+	position: absolute;
+	content: ' ';
+	top: 33px;
+	left: -5px;
+	width: 0;
+	height: 0;
+	border: 5px solid white;
+	border-radius: 5px;
+};
