@@ -1,33 +1,38 @@
-.endframe{
-	padding-bottom: 5px;
-}
-.btn-intro{
-	background-color: rgba(255, 0, 0, 0.7);
-	color: #fff;
-	position: absolute;
-}
-#introVid{
-	position: relative;
-	top: 30px;
-}
-#btn-intro-ort1{
-	position: absolute;
-	left: 10px;
-	top: 10px;
-}
-#btn-intro-ort2{
-	position: absolute;
-	left: 50px;
-	bottom: 100px;
-}
 #introWell{
-	height: 444px;
-	width: 560px;
-	background-image: url('img/endframe.png');
+	/*height: 444px;
+	width: 560px;*/
+	width: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgba(255, 0, 0, 0.6);
+	position: fixed;
+}
+#introVid{
 	position: relative;
+	min-height: 100%;
+	min-width: 100%;
+}
+#endframe{
+	position: relative;
+	top: 0px;
+	min-height: 100%;
+	min-width: 100%;
+}
+.btn-intro{
+	background-color: rgba(0, 0, 0, 0);
+	color: #fff;
+	position: absolute;
+	border: 0px;
+}
+#btn-intro-ort1{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+#btn-intro-ort2{
+	position: absolute;
+	left: 20%;
+	bottom: 10%;
 }
 .intro-btn-wrp{
 	display: none;

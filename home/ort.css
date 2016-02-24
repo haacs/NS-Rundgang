@@ -17,3 +17,6 @@ q {
 #platzhalter {
 	height: 1000px;
 }
+#map {
+	height: 100%;
+}

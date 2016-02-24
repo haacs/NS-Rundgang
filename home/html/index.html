@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,27 +56,28 @@
       </div>
     </nav>
 
-    <div class="container">
-
-      <div class="jumbotron">
+      <!--<div class="jumbotron">
         <div class="container">
           <h1>Willkommen!</h1>
           <p>NS - Stadtführung</p>
           <p><a class="btn btn-primary btn-lg" href="./tour/ort1.html" role="button">Stadtführung beginnen »</a></p>
         </div>
-      </div>
+      </div>-->
+
+      <div class="container"></div>
 
       <div align="center">
         <div id="introWell" class="well" align="center">
-          <video id="introVid" src="../img/testvid.mp4" autoplay></video>
+          <video id="introVid" src="../img/testvid.mp4" autoplay class="intro"></video>
+          <img src="../img/endframe.png" id="endframe" class="intro">
           <div id='btn-intro-ort1' class="intro-btn-wrp">
-            <a  href="./tour/ort1.html"role='button' class='btn btn-default btn-xs btn-intro' type="hidden" aria-label='Left Align'>
-              <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
+            <a  href="./tour/ort1.html" role='button' class='btn btn-default btn-intro' type="hidden" aria-label='Left Align'>
+              <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
             </a>
           </div>
           <div id='btn-intro-ort2' class="intro-btn-wrp">
-            <a role='button' class='btn btn-default btn-xs btn-intro' aria-label='Left Align'>
-              <span class='glyphicon glyphicon-arrow-down' aria-hidden='true'></span>
+            <a role='button' class='btn btn-default btn-intro' aria-label='Left Align'>
+              <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
             </a>
           </div>
           <script type="text/javascript">
@@ -84,7 +85,7 @@
               $('#introVid').on("ended", function(){
                 $(this).fadeOut("slow", function(){
                   $(".intro-btn-wrp").each(function() {
-                    $(this).fadeIn("slow")
+                    $(this).fadeIn("slow");
                   });
                 });
               }); 
@@ -92,6 +93,8 @@
           </script>
         </div>
       </div>
+
+    <div class="container">
 
       <hr>
 
