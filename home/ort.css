@@ -6,13 +6,14 @@
 }
 .section-inner {
 	padding: 10px;
+	background-color: white;
+	color: black;
 }
 .srctxt {
 	display: none;
 }
-q {
+.karl {
 	font-family: 'Waiting for the Sunrise', cursive;
-	font-size: 28px;
 }
 #platzhalter {
 	height: 1000px;

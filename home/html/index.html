@@ -41,7 +41,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stadtführung <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="./tour/ort1.html">Ort1</a></li>
+                <li><a href="#">Ort1</a></li>
                 <li><a href="#"></a>
                   <ul>
                     <li><a href="#">Ein optionaler Punkt</a></li>
@@ -56,13 +56,13 @@
       </div>
     </nav>
 
-      <!--<div class="jumbotron">
+      <div class="jumbotron">
         <div class="container">
           <h1>Willkommen!</h1>
-          <p>NS - Stadtführung</p>
-          <p><a class="btn btn-primary btn-lg" href="./tour/ort1.html" role="button">Stadtführung beginnen »</a></p>
+          <p>NS - Stadtführung in Arbeit</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Stadtführung beginnen »</a></p>
         </div>
-      </div>-->
+      </div>
 
       <div class="container"></div>
 
@@ -84,8 +84,10 @@
             jQuery(document).ready(function($){
               $('#introVid').on("ended", function(){
                 $(this).fadeOut("slow", function(){
-                  $(".intro-btn-wrp").each(function() {
-                    $(this).fadeIn("slow");
+                  $("#endframe").fadeIn("fast", function(){
+                    $(".intro-btn-wrp").each(function() {
+                      $(this).fadeIn("slow");
+                    });
                   });
                 });
               }); 

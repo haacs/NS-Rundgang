@@ -23,7 +23,7 @@
 .event-row .col-md-6 {
 	position: relative;
 }
-/*#eventwrp .event-row:nth-child(odd) .col-md-6:first-child:after {
+#eventwrp .event-row:nth-child(odd) .col-md-6:first-child:after {
 	position: absolute;
 	content: ' ';
 	top: 33px;
@@ -42,8 +42,8 @@
 	height: 0;
 	border: 5px solid white;
 	border-radius: 5px;
-}*/
-#eventwrp .event-row .col-md-6 .popover .arrow{
+}
+/*#eventwrp .event-row .col-md-6 .popover .arrow{
 	position: relative;
 }
 #eventwrp .event-row .col-md-6 .left .arrow:after {
@@ -65,4 +65,4 @@
 	height: 0;
 	border: 5px solid white;
 	border-radius: 5px;
-}
+}*/
