@@ -38,18 +38,6 @@
           </button>
         </div>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="../index.html">NS - Stadtführung</a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown active">
@@ -71,7 +59,7 @@
                 <li><a href="./14_rathaus.html">Rathaus</a></li>
                 <li>
                   <ul>
-                    <li><a href="./15_0_botanischer_garten">Botanischer Garten</a></li>
+                    <li><a href="./15_0_botanischer_garten.html">Botanischer Garten</a></li>
                   </ul>
                 </li>
                 <li><a href="./15_stolpersteine.html">Stolpersteine</a></li>
@@ -147,10 +135,13 @@
       </section>
 
       <section class="row panel panel-default">
-        <header class="panel-heading">
-          Quellen
+        <header id="sourcePanelHeader" class="panel-heading">
+          <a role="button" data-toggle="collapse" href="#sourcePanelBody" aria-expanded="false" aria-controls="sourcePanelBody">
+            Quellen 
+            <span class="caret"></span>
+          </a>
         </header>
-        <article class="panel-body">
+        <article id="sourcePanelBody" class="panel-body panel-collapse collapse" aria-labelledby="sourcePanelHeader" aria-expanded="false" role="tabpanel">
           <ol>
             <li><a href="#srcref-1">↑</a><cite>Klasse 10 c der FWS (Hg.): Rückspiegel. Eschwege - Eine Stadt wird braun. Eine Zeitung über den Nationalsozialismus aus heutiger Sicht reflektiert, Eschwege Mai/Juni 1997, S. 19</cite></li>
             <li><a href="#srcref-2">↑</a><cite>Hans-Werner Posdziech (Hg.): Alltag im Nationalsozialismus der Stadt Eschwege, Gießen 1982, S. 8</cite></li>
