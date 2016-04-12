@@ -6,15 +6,6 @@ body {
 	background-position: center -50px;
 }
 .jumbotron {
-	background-color: rgba(255, 0, 0, 0.7);
+	background-color: rgba(255, 0, 0, 0.75);
 	color: #fff;
-}
-footer > .row {
-	background-color: rgba(191, 191, 191, 0.9);
-}
-footer > div > div > a:link{
-	color: #333;
-}
-footer > div > div > a:visited{
-	color: #555;
 }

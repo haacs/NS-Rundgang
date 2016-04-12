@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,8 +84,59 @@
         <p>NS - Stadtführung</p>
       </header>
 
-      <section class="row panel panel-default">
-        <article class="col-xs-12 panel-body">
+      <section class="panel panel-default">
+        <article class="panel-body">
+
+          <div class="floatright col-xs-12 col-sm-7">
+            <div class="thumbnail">
+              <div id="wandelCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#wandelCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#wandelCarousel" data-slide-to="1"></li>
+                  <li data-target="#wandelCarousel" data-slide-to="2"></li>
+                </ol>
+    
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="../../img/tour/07_raiffeisenhaus/raiffeisenhaus_2016.jpg" alt="Außenansicht des Raiffeisenhauses in Eschwege">
+                    <div class="carousel-caption">
+                      <p>Das Raiffeisenhaus vor 1930</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="../../img/tour/07_raiffeisenhaus/raiffeisenhaus_ns.jpg" alt="Außenansicht des Raiffeisenhauses in Eschwege">
+                    <div class="carousel-caption">
+                      <p>Das Raiffeisenhaus als Sitz der NSDAP Kreisstelle</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="../../img/tour/07_raiffeisenhaus/raiffeisenhaus_2016.jpg" alt="Außenansicht des Raiffeisenhauses in Eschwege">
+                    <div class="carousel-caption">
+                      <p>Das Raiffeisenhaus heute</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#wandelCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#wandelCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <div class="caption">
+                <p class="center-block">
+                  <a class="btn btn-default btn-xs" role="button"  data-toggle="modal" data-target="#galleryModal" data-start="0">Galerie <span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+
           <p>
             Von diesem Haus aus organisierte die NSDAP im Kreis Eschwege ihr Handeln.
           </p>
@@ -144,8 +197,64 @@
         <p>Besondere Lernleistung für das Abitur im Fach Geschichte</p>
       </footer>
 
+      <!-- Picture Gallery -->
+      <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Bildergalerie</h4>
+            </div>
+
+            <div class="modal-body">
+              <div id="galleryCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#galleryCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#galleryCarousel" data-slide-to="1"></li>
+                  <li data-target="#galleryCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="../../img/tour/07_raiffeisenhaus/raiffeisenhaus_2016.jpg" alt="Außenansicht des Raiffeisenhauses in Eschwege">
+                    <div class="carousel-caption">
+                      <p>Das Raiffeisenhaus vor 1930</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="../../img/tour/07_raiffeisenhaus/raiffeisenhaus_ns.jpg" alt="Außenansicht des Raiffeisenhauses in Eschwege">
+                    <div class="carousel-caption">
+                      <p>Das Raiffeisenhaus als Sitz der NSDAP Kreisstelle</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="../../img/tour/07_raiffeisenhaus/raiffeisenhaus_2016.jpg" alt="Außenansicht des Raiffeisenhauses in Eschwege">
+                    <div class="carousel-caption">
+                      <p>Das Raiffeisenhaus heute</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#galleryCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#galleryCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
+    <script src="../../js/gallery.js"></script>
     <script src="../../js/srcbtn.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
