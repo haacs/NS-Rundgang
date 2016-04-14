@@ -80,6 +80,9 @@
       <header class="jumbotron">
         <h1>Rathaus</h1>
         <p>NS - Stadtführung</p>
+        <p><button class="btn btn-default btn-lg playbutton" data-src="14_rathaus_bis_interview.mp3">Audioguide Teil 1 abspielen <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></button></p>
+        <p><a href="#interview" role="button" class="btn btn-default btn-lg">Zum Interview scrollen <span class="glyphicon glyphicon-film" aria-hidden="true"></span></a></p>
+        <p><button class="btn btn-default btn-lg playbutton" data-src="14_rathaus_nach_interview.mp3">Audioguide Teil 2 abspielen <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></button></p>
       </header>
 
       <section class="panel panel-default">
@@ -287,7 +290,7 @@
           <p>
             Keiner kann das wohl besser beurteilen als ein einziger Mann, und der tut dies hier:
           </p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/1ykC1mM_OHo" frameborder="0" allowfullscreen class"center-block"></iframe>
+          <iframe id="interview" width="560" height="315" src="https://www.youtube.com/embed/1ykC1mM_OHo" frameborder="0" allowfullscreen class"center-block"></iframe>
           <br>
           <small>Der Ehrenbürgermeister Jürgen Zick ist bereit, über das Treffen zu berichten, welches ich schon früher für so wichtig hielt.</small>
           <p>
@@ -570,6 +573,7 @@
 
     </div>
 
+    <script src="../../js/audioguide.js"></script>
     <script src="../../js/gallery.js"></script>
     <script src="../../js/srcbtn.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
