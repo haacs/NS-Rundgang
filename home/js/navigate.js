@@ -24,7 +24,6 @@ jQuery(document).ready(function($){
     jQuery('#cookiecheck').toggleClass("glyphicon-check glyphicon-unchecked")
   });
 
-  document.cookie = "fuck=you; expires=800000000;";
 });
 
 function startNavigation (destination, origin) {
