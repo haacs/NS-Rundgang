@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,33 +84,34 @@
 
       <div class="container"></div>
 
-      <div align="center">
-        <div id="introWell" class="well" align="center">
-          <video id="introVid" src="../img/testvid.mp4" autoplay class="intro"></video>
-          <img src="../img/endframe.png" id="endframe" class="intro">
-          <div id='btn-intro-ort1' class="intro-btn-wrp">
-            <a  href="./tour/tour/ort1.html" role='button' class='btn btn-default btn-intro' type="hidden" aria-label='Left Align'>
-              <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
-            </a>
-          </div>
-          <div id='btn-intro-ort2' class="intro-btn-wrp">
-            <a role='button' class='btn btn-default btn-intro' aria-label='Left Align'>
-              <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
-            </a>
-          </div>
-          <script type="text/javascript">
-            jQuery(document).ready(function($){
-              $('#introVid').on("ended", function(){
-                $(this).fadeOut("slow", function(){
-                  $(".intro-btn-wrp").each(function() {
-                    $(this).fadeIn("slow");
-                  });
+      <section class="panel panel-default">
+        <article class="panel-body">
+          <div class="center-block row">
+            <div id="introCol" class="col-xs-12" align="center">
+              <video id="introVid" src="../img/final.mp4" autoplay class="intro"></video>
+              <div id='btn-intro-ort1' class="intro-btn-wrp">
+                <a  href="./tour/tour/ort1.html" role='button' class='btn btn-default btn-intro' type="hidden" aria-label='Left Align'>
+                  <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
+                </a>
+              </div>
+              <div id='btn-intro-ort2' class="intro-btn-wrp">
+                <a role='button' class='btn btn-default btn-intro' aria-label='Left Align'>
+                  <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
+                </a>
+              </div>
+              <script type="text/javascript">
+                jQuery(document).ready(function($){
+                  $('#introVid').on("ended", function(){
+                    $(".intro-btn-wrp").each(function() {
+                      $(this).fadeIn("slow");
+                    });
+                  }); 
                 });
-              }); 
-            });
-          </script>
-        </div>
-      </div>
+              </script>
+            </div>
+          </div>
+        </article>
+      </section>
 
     <div class="container">
 
