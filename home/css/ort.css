@@ -25,3 +25,10 @@
 .floatright {
   float: right;
 }
+#map {
+  height: 500px;
+}
+#textdir {
+  max-height: 500px;
+  overflow: auto;
+}
