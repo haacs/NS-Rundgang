@@ -1,24 +1,16 @@
 #introCol{
-	/*height: 444px;
-	width: 560px;*/
-	position: absolute;
+	width: 100vh;
 }
 #introVid{
+	height: 100%;
+	width: 100%;
+}
+#introBtn{
+	background-color: rgba(255, 0, 0, 1);
+	color: #fff;
+	display: none;
+	position: relative;
 }
 .btn-intro{
-	background-color: rgba(0, 0, 0, 0);
-	color: #fff;
-	position: relative;
-	border: 0px;
-}
-#btn-intro-ort1{
-	left: 50%;
-	top: 50%;
-}
-#btn-intro-ort2{
-	left: 20%;
-	bottom: 10%;
-}
-.intro-btn-wrp{
-	display: none;
+	position: absolute;
 }

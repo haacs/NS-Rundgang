@@ -6,9 +6,6 @@
 .popover .right {
 	text-align: right;
 }
-#tglsrc {
-	position: fixed;
-}
 #eventwrp {
 	background-repeat: repeat-y;
 	background-position: center;
@@ -23,7 +20,7 @@
 .event-row .col-md-6 {
 	position: relative;
 }
-/*#eventwrp .event-row:nth-child(odd) .col-md-6:first-child:after {
+#eventwrp .event-row:nth-child(odd) .col-md-6:first-child:after {
 	position: absolute;
 	content: ' ';
 	top: 33px;
@@ -34,29 +31,6 @@
 	border-radius: 5px;
 }
 #eventwrp .event-row:nth-child(even) .col-md-6:first-child:after {
-	position: absolute;
-	content: ' ';
-	top: 33px;
-	left: -5px;
-	width: 0;
-	height: 0;
-	border: 5px solid white;
-	border-radius: 5px;
-}*/
-#eventwrp .event-row .col-md-6 .popover .arrow{
-	position: relative;
-}
-#eventwrp .event-row .col-md-6 .left .arrow:after {
-	position: absolute;
-	content: ' ';
-	top: 33px;
-	right: -5px;
-	width: 0;
-	height: 0;
-	border: 5px solid white;
-	border-radius: 5px;
-}
-#eventwrp .event-row .col-md-6 .right .arrow:after {
 	position: absolute;
 	content: ' ';
 	top: 33px;
