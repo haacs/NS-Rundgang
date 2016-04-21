@@ -84,30 +84,37 @@
 
       <div class="container"></div>
 
-      <div class="center-block row">
-        <div id="introCol" class="col-xs-12" align="center">
-          <video id="introVid" src="../img/final.mp4" autoplay class="intro"></video>
-          <div class="btn-intro">
-            <a id="introBtn" role='link' class='btn btn-default center-block' aria-label='Stadtführung starten'>
-              START
-            </a>
-          </div>
-          <script type="text/javascript">
-            jQuery(document).ready(function($){
-              $('#introVid').on("ended", function(){
-                $("#introBtn").fadeIn("slow");
-              }); 
+      <div id="introDiv" class="center-block">
+        <a href="./tour/01_bahnhof.html" href id="introBtn" role='link' class='btn btn-default btn-lg btn-block center-block' aria-label='Stadtführung starten'>START</a>
+        <video id="introVid" src="../img/final.mp4" autoplay class="intro center-block"></video>
+        <script type="text/javascript">
+          jQuery(document).ready(function($){
+            $('#introVid').on("ended", function($){
+              $(this).fadeOut(function(){
+                $('#introBtn').fadeIn();
+              })
             });
-          </script>
-        </div>
+          });
+        </script>
       </div>
 
     <div class="container">
 
       <hr>
 
-      <footer>
-        <p>Besondere Lernleistung für das Abitur im Fach Geschichte</p>
+      <footer class="panel panel-default text-center footpanel">
+        <div class="panel-heading">
+          <small>Besondere Lernleistung für das Abitur im Fach Geschichte</small>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <small><a href="./impressum.html">Impressum</a></small>
+            </div>
+            <div class="col-sm-6"></div>
+              <small><a href="./publikationen.html">Publikationen</a></small>
+          </div>
+        </div>
       </footer>
     </div>
 

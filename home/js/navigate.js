@@ -17,14 +17,14 @@ jQuery(document).ready(function($){
 
   if (getCookie('autoNav')==true) {
     if (jQuery('#map').dataset.btn==="false") {
-      var map = jQuery('#map');
+      var mapBtn = jQuery('.mapBtn');
       var destination = {
-        lat: Number(map.dataset.destlat),
-        lng: Number(map.dataset.destlng)
+        lat: Number(mapBtn.dataset.destlat),
+        lng: Number(mapBtn.dataset.destlng)
       };
       var origin = {
-        lat: Number(map.dataset.orglat),
-        lng: Number(map.dataset.orglng)
+        lat: Number(mapBtn.dataset.orglat),
+        lng: Number(mapBtn.dataset.orglng)
       };
       startNavigation(origin, destination);
     } else {

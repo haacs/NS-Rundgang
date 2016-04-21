@@ -1,16 +1,16 @@
-#introCol{
-	width: 100vh;
+#introDiv{
+	background: url("../img/endframe.png");
+	background-size: 100%;
 }
 #introVid{
-	height: 100%;
-	width: 100%;
+	max-width: 100vw;
+	max-height: 100vh;
 }
 #introBtn{
-	background-color: rgba(255, 0, 0, 1);
+	background-color: rgba(255, 0, 0, 0.5);
 	color: #fff;
+	height: 100%;
 	display: none;
-	position: relative;
 }
 .btn-intro{
-	position: absolute;
 }
