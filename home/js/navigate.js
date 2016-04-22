@@ -1,33 +1,20 @@
 jQuery(document).ready(function($){
+  var orgDest = null;
   $('.mapBtn').click(function($) {
 
-    var destination = {
-      lat: Number(this.dataset.destlat),
-      lng: Number(this.dataset.destlng)
-    };
-    var origin = {
-      lat: Number(this.dataset.orglat),
-      lng: Number(this.dataset.orglng)
-    };
+    orgDest = getOrgDest(this);
+
     var cookiecheck = jQuery('#cookiecheck');
     if ( cookiecheck.hasClass('glyphicon-check') && (getCookie('autoNav')!=='true')) {
       setCookie("autoNav", "true", 8064000);
     };
-    startNavigation(origin, destination);
+    startNavigation(orgDest.origin, orgDest.destination);
   });
 
   if (getCookie('autoNav')==true) {
     if (jQuery('#map').dataset.btn==="false") {
-      var mapBtn = jQuery('.mapBtn');
-      var destination = {
-        lat: Number(mapBtn.dataset.destlat),
-        lng: Number(mapBtn.dataset.destlng)
-      };
-      var origin = {
-        lat: Number(mapBtn.dataset.orglat),
-        lng: Number(mapBtn.dataset.orglng)
-      };
-      startNavigation(origin, destination);
+      orgDest = getOrgDest(jQuery('.mapBtn'))
+      startNavigation(orgDest.origin, orgDest.destination);
     } else {
       jQuery('#cookies').remove();
     };
@@ -39,32 +26,30 @@ jQuery(document).ready(function($){
 });
 
 function getOrgDest (elem) {
-  var origin = null;
-  var destination = null;
-  var orgDest = null;
-  switch (elem.dataset.placetype) {
-    case "latlng":
-      orgDest = {
-        origin: {
-          lat: Number(elem.dataset.orglat),
-          lng: Number(elem.dataset.orglng)
-        },
-        destination: {
-          lat: Number(elem.dataset.destlat),
-          lng: Number(elem.dataset.destlng)
-        }
-      };
-    break;
-    case "string":
-      orgDest = {
-        origin: (elem.dataset.orgplacestring),
-        destination: (elem.dataset.destplacestring)
-      }
-    break;
-    case "placeid":
-      mapPlace = elem.dataset.placeid;
-    break;
-  }
+  var org = null;
+  var dest = null;
+  var orgDest = {org, dest};
+  if (elem.dataset.orglat) {
+    orgDest.org = {
+      lat: Number(elem.dataset.orglat),
+      lng: Number(elem.dataset.orglng)
+    };
+  } else if (elem.dataset.placestring) {
+    orgDest.org = elem.dataset.orgplacestring;
+  } else if (elem.dataset.placeid) {
+    orgDest.org = elem.dataset.orgplaceid;
+  };
+  if (elem.dataset.destlat) {
+    orgDest.dest = {
+      lat: Number(elem.dataset.destlat),
+      lng: Number(elem.dataset.destlng)
+    };
+  } else if (elem.dataset.placestring) {
+    orgDest.dest = elem.dataset.destplacestring;
+  } else if (elem.dataset.placeid) {
+    orgDest.dest = elem.dataset.destplaceid;
+  };
+  return orgDest;
 }
 
 function startNavigation (origin, destination) {
