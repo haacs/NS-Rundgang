@@ -74,29 +74,15 @@
       </div>
     </nav>
 
-      <div class="jumbotron">
-        <div class="container">
-          <h1>Willkommen!</h1>
-          <p>NS - Stadtführung</p>
-          <p><a class="btn btn-primary btn-lg" href="./tour/tour/ort1.html" role="button">Stadtführung beginnen »</a></p>
-        </div>
-      </div>
+    <div id="introDiv" class="center-block">
+      <iframe id="introVid" class="center-block" src="https://www.youtube.com/embed/nmKPjq5PzoA" frameborder="0" allowfullscreen></iframe>
+    </div>
 
-      <div class="container"></div>
-
-      <div id="introDiv" class="center-block">
-        <a href="./tour/01_bahnhof.html" href id="introBtn" role='link' class='btn btn-default btn-lg btn-block center-block' aria-label='Stadtführung starten'>START</a>
-        <video id="introVid" src="../img/final.mp4" autoplay class="intro center-block"></video>
-        <script type="text/javascript">
-          jQuery(document).ready(function($){
-            $('#introVid').on("ended", function($){
-              $(this).fadeOut(function(){
-                $('#introBtn').fadeIn();
-              })
-            });
-          });
-        </script>
+    <div class="jumbotron">
+      <div class="container">
+        <p><a class="btn btn-primary btn-lg" href="./tour/tour/ort1.html" role="button">Stadtführung beginnen »</a></p>
       </div>
+    </div>
 
     <div class="container">
 
