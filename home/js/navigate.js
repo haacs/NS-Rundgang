@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
   $('.mapBtn').click(function($) {
+
     var destination = {
       lat: Number(this.dataset.destlat),
       lng: Number(this.dataset.destlng)
@@ -35,8 +36,36 @@ jQuery(document).ready(function($){
   $('#cookiecheck').click(function($){
     jQuery('#cookiecheck').toggleClass("glyphicon-check glyphicon-unchecked")
   });
-
 });
+
+function getOrgDest (elem) {
+  var origin = null;
+  var destination = null;
+  var orgDest = null;
+  switch (elem.dataset.placetype) {
+    case "latlng":
+      orgDest = {
+        origin: {
+          lat: Number(elem.dataset.orglat),
+          lng: Number(elem.dataset.orglng)
+        },
+        destination: {
+          lat: Number(elem.dataset.destlat),
+          lng: Number(elem.dataset.destlng)
+        }
+      };
+    break;
+    case "string":
+      orgDest = {
+        origin: (elem.dataset.orgplacestring),
+        destination: (elem.dataset.destplacestring)
+      }
+    break;
+    case "placeid":
+      mapPlace = elem.dataset.placeid;
+    break;
+  }
+}
 
 function startNavigation (origin, destination) {
   var directionsService = new google.maps.DirectionsService;
