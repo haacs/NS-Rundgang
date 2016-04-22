@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,14 +13,14 @@
     <title>Home - NS Stadtführung</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="../overalldesign.css" rel="stylesheet">
-    <link href="../index.css" rel="stylesheet">
+    <link href="../css/overalldesign.css" rel="stylesheet">
+    <link href="../css/index.css" rel="stylesheet">
 
-    <script src="../ie-emulation-modes-warning.js"></script>
+    <script src="../js/ie-emulation-modes-warning.js"></script>
 
-    <script src="../jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
 
   </head>
 
@@ -41,16 +43,32 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stadtführung <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Ort1</a></li>
-                <li><a href="#"></a>
+                <li><a href="./tour/01_bahnhof.html">Bahnhof</a></li>
+                <li><a href="./tour/02_firma_eichmann.html">Firma Eichmann</a></li>
+                <li><a href="./tour/03_firma_brinkmann.html">Firma Brinkmann</a></li>
+                <li><a href="./tour/04_friedrich_wilhelm_schule.html">Friedrich Wilhelm Schule</a></li>
+                <li><a href="./tour/05_erstes_kulmbacher.html">Erstes Kulmbacher</a></li>
+                <li><a href="./tour/06_landgrafenschloss.html">Landgrafenschloss</a></li>
+                <li><a href="./tour/07_raiffeiseinhaus.html">Raiffeisenhaus</a></li>
+                <li><a href="./tour/08_firma_goldmann.html">Firma Goldmann</a></li>
+                <li><a href="./tour/09_forstgasse.html">Forstgasse</a></li>
+                <li><a href="./tour/10_stad_marktstrasse.html">Stad Ecke Marktstraße</a></li>
+                <li><a href="./tour/11_haus_neben_junghans.html">Haus Stad ‚neben Junghans‘</a></li>
+                <li><a href="./tour/12_marktplatz.html">Marktplatz</a></li>
+                <li><a href="./tour/13_vergangenheitsbewltigung.html">Überleitung Vergangenheitsbewältigung</a></li>
+                <li><a href="./tour/14_rathaus.html">Rathaus</a></li>
+                <li>
                   <ul>
-                    <li><a href="#">Ein optionaler Punkt</a></li>
+                    <li><a href="./tour/15_0_botanischer_garten">Botanischer Garten</a></li>
                   </ul>
                 </li>
-                <li><a href="#">weitere Punkte</a></li>
+                <li><a href="./tour/15_stolpersteine.html">Stolpersteine</a></li>
+                <li><a href="./tour/16_publikationen.html">Publikatonen</a></li>
+                <li><a href="./tour/17_strassenumbenennung.html">Straßenumbenennung</a></li>
+                <li><a href="./tour/18_ende.html">Ende</a></li>
               </ul>
+              <li><a href="./chronik.html">Chronik</a></li>
             </li>
-            <li><a href="./chronik.html">Chronik</a></li>
           </ul>
         </div>
       </div>
@@ -59,55 +77,50 @@
       <div class="jumbotron">
         <div class="container">
           <h1>Willkommen!</h1>
-          <p>NS - Stadtführung in Arbeit</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Stadtführung beginnen »</a></p>
+          <p>NS - Stadtführung</p>
+          <p><a class="btn btn-primary btn-lg" href="./tour/tour/ort1.html" role="button">Stadtführung beginnen »</a></p>
         </div>
       </div>
 
       <div class="container"></div>
 
-      <div align="center">
-        <div id="introWell" class="well" align="center">
-          <video id="introVid" src="../img/testvid.mp4" autoplay class="intro"></video>
-          <img src="../img/endframe.png" id="endframe" class="intro">
-          <div id='btn-intro-ort1' class="intro-btn-wrp">
-            <a  href="./tour/ort1.html" role='button' class='btn btn-default btn-intro' type="hidden" aria-label='Left Align'>
-              <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
-            </a>
-          </div>
-          <div id='btn-intro-ort2' class="intro-btn-wrp">
-            <a role='button' class='btn btn-default btn-intro' aria-label='Left Align'>
-              <span class='glyphicon glyphicon-map-marker' aria-hidden='true'></span>
-            </a>
-          </div>
-          <script type="text/javascript">
-            jQuery(document).ready(function($){
-              $('#introVid').on("ended", function(){
-                $(this).fadeOut("slow", function(){
-                  $("#endframe").fadeIn("fast", function(){
-                    $(".intro-btn-wrp").each(function() {
-                      $(this).fadeIn("slow");
-                    });
-                  });
-                });
-              }); 
+      <div id="introDiv" class="center-block">
+        <a href="./tour/01_bahnhof.html" href id="introBtn" role='link' class='btn btn-default btn-lg btn-block center-block' aria-label='Stadtführung starten'>START</a>
+        <video id="introVid" src="../img/final.mp4" autoplay class="intro center-block"></video>
+        <script type="text/javascript">
+          jQuery(document).ready(function($){
+            $('#introVid').on("ended", function($){
+              $(this).fadeOut(function(){
+                $('#introBtn').fadeIn();
+              })
             });
-          </script>
-        </div>
+          });
+        </script>
       </div>
 
     <div class="container">
 
       <hr>
 
-      <footer>
-        <p>Besondere Lernleistung für das Abitur im Fach Geschichte</p>
+      <footer class="panel panel-default text-center footpanel">
+        <div class="panel-heading">
+          <small>Besondere Lernleistung für das Abitur im Fach Geschichte</small>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <small><a href="./impressum.html">Impressum</a></small>
+            </div>
+            <div class="col-sm-6"></div>
+              <small><a href="./publikationen.html">Publikationen</a></small>
+          </div>
+        </div>
       </footer>
     </div>
 
-    <script src="../bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
   
 
   </body>

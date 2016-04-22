@@ -1,0 +1,20 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	margin-top: 50px;
+	padding-bottom: 20px;
+	background: url('../img/eichmann_briefpapier_leer.jpg');
+	background-position: center -50px;
+}
+.jumbotron {
+	background-color: rgba(255, 0, 0, 0.75);
+	color: #fff;
+}
+.panel {
+	border-color: red;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+.footpanel {
+	border-color: rgba(192, 192, 192, 1);
+	background-color: rgba(255, 255, 255, 0.75);
+	bottom: 0px;
+}
