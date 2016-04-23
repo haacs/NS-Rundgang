@@ -8,13 +8,13 @@ jQuery(document).ready(function($){
     if ( cookiecheck.hasClass('glyphicon-check') && (getCookie('autoNav')!=='true')) {
       setCookie("autoNav", "true", 8064000);
     };
-    startNavigation(orgDest.origin, orgDest.destination);
+    startNavigation(orgDest.org, orgDest.dest);
   });
 
   if (getCookie('autoNav')==true) {
     if (jQuery('#map').dataset.btn==="false") {
-      orgDest = getOrgDest(jQuery('.mapBtn'))
-      startNavigation(orgDest.origin, orgDest.destination);
+      orgDest = getOrgDest(jQuery('.mapBtn'));
+      startNavigation(orgDest.org, orgDest.dest);
     } else {
       jQuery('#cookies').remove();
     };
@@ -34,20 +34,20 @@ function getOrgDest (elem) {
       lat: Number(elem.dataset.orglat),
       lng: Number(elem.dataset.orglng)
     };
-  } else if (elem.dataset.placestring) {
+  } else if (elem.dataset.orgplacestring) {
     orgDest.org = elem.dataset.orgplacestring;
-  } else if (elem.dataset.placeid) {
-    orgDest.org = elem.dataset.orgplaceid;
+  } else if (elem.dataset.orgplaceid) {
+    orgDest.org = {placeId: elem.dataset.orgplaceid};
   };
   if (elem.dataset.destlat) {
     orgDest.dest = {
       lat: Number(elem.dataset.destlat),
       lng: Number(elem.dataset.destlng)
     };
-  } else if (elem.dataset.placestring) {
+  } else if (elem.dataset.destplacestring) {
     orgDest.dest = elem.dataset.destplacestring;
-  } else if (elem.dataset.placeid) {
-    orgDest.dest = elem.dataset.destplaceid;
+  } else if (elem.dataset.destplaceid) {
+    orgDest.dest = {placeId: elem.dataset.destplaceid};
   };
   return orgDest;
 }
@@ -56,18 +56,23 @@ function startNavigation (origin, destination) {
   var directionsService = new google.maps.DirectionsService;
   var directionsDisplay = new google.maps.DirectionsRenderer;
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: origin,
+    center: {lat: 51.191741, lng: 10.042568},
     zoom: 8
   });
-  var posMarker = new google.maps.Marker({
-    position: origin,
-    title: 'Sie sind hier',
-  });
+  var markerOpts = {title: 'Sie sind hier'};
+  if (origin.lat) {
+    markerOpts.position = origin;
+  } else if (origin.placeId) {
+    markerOpts.place = origin.placeId;
+  };
+  var posMarker = new google.maps.Marker(markerOpts);
   directionsDisplay.setMap(map);
   directionsDisplay.setPanel(document.getElementById('textdir'));
   function setOrigin(pos){
-    origin = {lat: pos.coords.latitude,
-      lng: pos.coords.longitude};
+    origin = {
+      lat: pos.coords.latitude,
+      lng: pos.coords.longitude
+    };
     calculateAndDisplayRoute(origin, destination, directionsService, directionsDisplay, posMarker);
   };
   if (navigator.geolocation) {
